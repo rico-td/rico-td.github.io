@@ -1,0 +1,13 @@
+:root {
+    --blue: rgb(0, 149, 246); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+body {
+    margin: 1rem;
+}

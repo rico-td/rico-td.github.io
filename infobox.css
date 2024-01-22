@@ -2,15 +2,12 @@
     --blue: rgb(0, 149, 246); 
 }
 
-
 .infobox {
 /** text with picture **/
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    min-width: 600px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 10px;
+
 }
 
     .file-profile-picture {

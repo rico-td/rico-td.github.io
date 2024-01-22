@@ -1,10 +1,7 @@
-:root {
-    --blue: rgb(0, 149, 246); 
-}
-
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 15px;
 }
 
@@ -15,12 +12,12 @@ header {
     }
 
     .home-button {
-        font-size: 25px;
+        font-size: 40px;
         font-weight: bold;
         font-family: Cookie;
         background-color: white;
         border-style: none;
-
+        text-decoration: none;
         display: flex;
         flex: 1;
     }
@@ -48,6 +45,10 @@ header {
 
 .home-button:hover, .login:hover, .signup:hover {
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
 
 

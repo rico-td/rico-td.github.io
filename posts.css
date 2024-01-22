@@ -1,0 +1,33 @@
+.post {
+    max-width: 200px;
+    border-radius: 15px;
+}
+
+.gridContainerPosts {
+    margin-top: 1rem;
+    display:grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 5px;
+}
+
+.SVG {
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    width: 15px;
+}
+
+.btnsHeaderPosts {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkHeader {
+    font-size: 14px;
+    text-decoration: none;
+    color: grey;
+    margin-right: 2rem;
+}
