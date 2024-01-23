@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    flex-direction: column;   
+}
+
+.inputboxes{
+    padding: 0.5rem;
+    width: 300px;
+    font-size: 12px;
+}
+
+.mailBox {
+    margin-top: 2.5rem;;
+}
+
+label {
+    margin: 5px;
+}
+
+div {
+    margin: 5px;
+}
+
+.signInButtonContact {
+    
+    padding: 0.5rem;
+    border-radius:  0.5rem;
+    border-style: none;
+    background-color: var(--blue);
+    color: var(--white);
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

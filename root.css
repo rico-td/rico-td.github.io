@@ -1,11 +1,13 @@
 :root {
-    --blue: rgb(0, 149, 246); 
+    --blue: #0095F6;
+    --white: rgb(255, 255, 255); 
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: Roboto;
+    font-size: 14px;
 }
 
 body {
