@@ -4,6 +4,8 @@
 }
 
 * {
+
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Roboto;
@@ -31,6 +33,10 @@ body {
 
     .profile-name {
         display: none;
+    }
+
+    .follow {
+        margin-left: 0;
     }
 
 }

@@ -4,7 +4,7 @@
 }
 
 .gridContainerPosts {
-    margin-top: 1rem;
+    margin-top: 20px;
     display:grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 200px);
@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .linkHeader {

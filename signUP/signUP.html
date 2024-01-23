@@ -18,11 +18,11 @@
     <hr>
     <div class="container">
         <div>
-            <a href="https://www.instagram.com/">
+            <a href="../index.html">
                 <button class="home-button">Instagram</button>
             </a>
         </div>
-        <form  method="post">
+        <form  id ="form">
             <label for="name"></label>
             <input class="inputboxes mailBox" type="text" id="name" name="hallo" placeholder="Name" required>
             
@@ -30,30 +30,41 @@
             
             <input class="inputboxes" type="email" id="email" name="email" placeholder="E-Mail" required>
             <label for="password"></label>
-            <input class="inputboxes" type="text" id="password" name="password" placeholder="Password" required>
+            <input class="inputboxes" type="password" id="password" name="password" placeholder="Password" required>
     
-            <input class="signInButtonContact" onclick="onSubmit()" type="submit" value="Anmelden">
-            <input type="checkbox">
+            <input class="signInButtonContact" type="submit" value="Anmelden">
         </form>
     </div>
     <hr>
 
+    <div id ="login"></div>
+
     <script>
-        function onSubmit() {
-            const inputName=document.getElementById("name")
-            const nameValue=inputName.value
-            alert("Thank you " + inputName.value + " your request has been send")
+        var form = document.getElementById('form')
 
-            // const inputName=document.getElementById("name")
-            // const nameValue=inputName.value
+        form.addEventListener('submit',function(event){
+            event.preventDefault() //prevents the form from autosubscribing
 
-            // const inputName=document.getElementById("name")
-            // const nameValue=inputName.value
+            var name = document.getElementById('name').value
+            console.log(name)
+            var email = document.getElementById('email').value
+            console.log(email)
+            var password = document.getElementById('password').value
+            console.log(password)
+
+            const Data = { name, password};
+
+            var DataSignIn = {
+                Name: name,
+                Email: email,
+                Password: password,
+            };
             
-            // const inputName=document.getElementById("name")
-            // const nameValue=inputName.value
+            document.getElementById('login').innerText = JSON.stringify(DataSignIn);
+        });
 
-        }
+
+    </script>
     </script>
 
 </body>

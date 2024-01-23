@@ -7,7 +7,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin: 20px auto;
+    /* margin-bottom: 20px; */
+    
 
 }
 
@@ -78,12 +80,7 @@
                 font-weight: 500;
             }
 
-        .biography {
-            display: flex;
-            flex-direction: column;
-        }
-
-            .text-biography {
+            .singleText {
                 font-size: 10px;
                 font-weight: 300;
             }
@@ -103,13 +100,14 @@
             }
 
 .adress {
+    font-size: 10px;
     color: rgba(139, 139, 139, 0.834);
-    margin: 2px;
     text-decoration: none;  
     font-weight: 300;
 }   
 
 .linkr {
+    font-size: 10px;
     color: var(--blue);  
     margin: 2px;
     text-decoration: none;

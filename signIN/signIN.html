@@ -5,52 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="../root.css"> 
-    <link rel="stylesheet" href="/signIN/signIN.css">
+    <link rel="stylesheet" href="signIN.css">
     <link rel="stylesheet" href="../header.css"> 
+
 
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Roboto:wght@400;500&display=swap" rel="stylesheet"></
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <hr>
     <div class="container">
         <div>
-            <a href="https://www.instagram.com/">
+            <a href="../index.html">
                 <button class="home-button">Instagram</button>
             </a>
         </div>
-        <form  method="post">
-            <label for="name"></label>
-            <input class="inputboxes mailBox" type="text" id="name" name="hallo" placeholder="E-Mail" required>
-
-            <label for="email"></label>
-            <input class="inputboxes" type="email" id="email" name="email" placeholder="Password" required>
-
-            <input class="signInButtonContact" onclick="onSubmit()" type="submit" value="Anmelden">
-            <input type="checkbox">
+        <form id="form">
+            <input  type="email" id="email" class="inputboxes mailBox" placeholder="Email" required>        
+            <input type="password" id="password" class="inputboxes" placeholder="Password" required>
+            <input type="submit" value="Anmelden" class="signInButtonContact">
         </form>
     </div>
     <hr>
 
+    <div id ="login"></div>
+
     <script>
-        function onSubmit() {
-            const inputName=document.getElementById("name")
-            const nameValue=inputName.value
-            alert("Thank you " + inputName.value + " your request has been send")
+        var form = document.getElementById('form')
 
-            // const inputName=document.getElementById("name")
-            // const nameValue=inputName.value
+        form.addEventListener('submit',function(event){
+            event.preventDefault() //prevents the form from autosubscribing
 
-            // const inputName=document.getElementById("name")
-            // const nameValue=inputName.value
-            
-            // const inputName=document.getElementById("name")
-            // const nameValue=inputName.value
+            var email = document.getElementById('email').value
+            console.log(email)
+            var password = document.getElementById('password').value
+            console.log(password)
 
-        }
+            const Data = { name, password};
+
+            var DataSignIn = {
+                Email: email,
+                Password: password,
+            };
+
+            document.getElementById('login').innerText = JSON.stringify(DataSignIn);
+
+        });
     </script>
 
 </body>
@@ -61,3 +64,5 @@
 <!-- FRAGEN -->
 
 <!-- welcher button bei Anmelden? submit, normal ... ? -->
+
+
