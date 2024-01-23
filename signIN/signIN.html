@@ -33,6 +33,7 @@
 
     <div id ="login"></div>
 
+<!-- JAVASCRIPT -->
     <script>
         var form = document.getElementById('form')
 
@@ -43,19 +44,19 @@
             console.log(email)
             var password = document.getElementById('password').value
             console.log(password)
-
             const Data = { name, password};
 
+            // write the jason-object
             var DataSignIn = {
                 Email: email,
                 Password: password,
             };
 
+             // display the datas from the form
             document.getElementById('login').innerText = JSON.stringify(DataSignIn);
 
         });
     </script>
-
 </body>
 </html>
 
