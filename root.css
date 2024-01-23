@@ -9,5 +9,33 @@
 }
 
 body {
-    margin: 1rem;
+    margin: 0.5rem;
 }
+
+
+@media only screen and (max-width: 640px) {
+    
+    .post {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 15px;
+    }
+
+    .gridContainerPosts {
+    display:grid;
+    justify-content: center;
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
+    }
+
+    .profile-name {
+        display: none;
+    }
+
+}
+
+
+/* 
+@media only screen and (max-width: 831px) {
+    
+} 
+*/

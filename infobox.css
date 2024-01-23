@@ -4,6 +4,7 @@
 
 .infobox {
 /** text with picture **/
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 10px;
