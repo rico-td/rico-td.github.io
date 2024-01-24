@@ -1,24 +1,18 @@
 form {
     display: flex;
     flex-direction: column;
+    margin-top: 5rem;
 }
 
-.inputboxes{
+.home-button {
+    margin-top: 2rem;
+}
+
+.inputbox{
     padding: 0.5rem;
     width: 300px;
     font-size: 12px;
-}
-
-.mailBox {
-    margin-top: 2.5rem;;
-}
-
-label {
-    margin: 5px;
-}
-
-div {
-    margin: 5px;
+    margin-top: 0.5rem;
 }
 
 .signInButtonContact {
@@ -32,12 +26,29 @@ div {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.1rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.containerSignIN, .containerSignUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    border-color: rgb(134, 134, 134);
+    width: 400px;
+    min-height: 500px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
