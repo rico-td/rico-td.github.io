@@ -113,8 +113,9 @@
         </div>
     </div>
 <!-- posts section -->
-    <div class="gridContainerPosts">
-        <img class="post" src="assets\img\posts\01.png" alt="post">
+    <div id="loading">Loading...</div>
+    <div id="imageGrid" class="gridContainerPosts">
+        <!-- <img class="post" src="assets\img\posts\01.png" alt="post">
         <img class="post" src="assets\img\posts\02.png" alt="post">
         <img class="post" src="assets\img\posts\03.png" alt="post">
         <img class="post" src="assets\img\posts\04.png" alt="post">
@@ -137,8 +138,86 @@
         <img class="post" src="assets\img\posts\06.png" alt="post">
         <img class="post" src="assets\img\posts\07.png" alt="post">
         <img class="post" src="assets\img\posts\08.png" alt="post">
-        <img class="post" src="assets\img\posts\09.png" alt="post">      
+        <img class="post" src="assets\img\posts\09.png" alt="post">       -->
     </div>
+
+    <script>
+        var jsonData = {
+          images: [
+            'https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/290275/pexels-photo-290275.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/259239/pexels-photo-259239.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/234257/pexels-photo-234257.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/872512/pexels-photo-872512.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028177/pexels-photo-2028177.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/3550808/pexels-photo-3550808.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/7693229/pexels-photo-7693229.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028176/pexels-photo-2028176.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028178/pexels-photo-2028178.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/6160299/pexels-photo-6160299.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/4986547/pexels-photo-4986547.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/290275/pexels-photo-290275.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/259239/pexels-photo-259239.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/234257/pexels-photo-234257.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/872512/pexels-photo-872512.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028177/pexels-photo-2028177.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/3550808/pexels-photo-3550808.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/7693229/pexels-photo-7693229.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028176/pexels-photo-2028176.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028178/pexels-photo-2028178.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/6160299/pexels-photo-6160299.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/4986547/pexels-photo-4986547.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/290275/pexels-photo-290275.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/259239/pexels-photo-259239.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/234257/pexels-photo-234257.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/872512/pexels-photo-872512.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028177/pexels-photo-2028177.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/3550808/pexels-photo-3550808.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/7693229/pexels-photo-7693229.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028176/pexels-photo-2028176.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/2028178/pexels-photo-2028178.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/6160299/pexels-photo-6160299.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://images.pexels.com/photos/4986547/pexels-photo-4986547.jpeg?auto=compress&cs=tinysrgb&w=400',
+    
+          ]
+        };
+    
+        function simulateDatabaseQuery(callback) {
+          // Simuliere eine Datenbankabfrage mit einem Timeout von 2 Sekunden
+          setTimeout(callback, 2000);
+        }
+    
+        function loadImages() {
+          var loadingDiv = document.getElementById('loading');
+          var imageGrid = document.getElementById('imageGrid');
+    
+          // Zeige den Ladebildschirm an
+          loadingDiv.style.display = 'block';
+    
+          // Simuliere die Datenbankabfrage
+          simulateDatabaseQuery(function () {
+            // Verstecke den Ladebildschirm nach der Datenbankabfrage
+            loadingDiv.style.display = 'none';
+    
+            // Iteriere durch die Bild-URLs im JSON-Objekt
+            jsonData.images.forEach(function (imageUrl) {
+              var imageContainer = document.createElement('div');
+              imageContainer.className = 'image-container';
+    
+              var imageElement = document.createElement('img');
+              imageElement.src = imageUrl;
+    
+              imageContainer.appendChild(imageElement);
+              imageGrid.appendChild(imageContainer);
+            });
+          });
+        }
+    
+        document.addEventListener('DOMContentLoaded', loadImages);
+    
+      </script>
 
 </body>
 </html>    
